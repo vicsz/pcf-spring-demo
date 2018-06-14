@@ -30,6 +30,17 @@ Deploy to PCF
 cf push pcf-demo -p build/libs/pcf-demo-0.0.1-SNAPSHOT.jar
 ```
 
+Hit the index page ..
+
+Note usage of VCAP environment variables.
+
+## AppsMan Developer Experience
+
+Note:
+
+PCF Metrics, including Logging
+
+Tentative Alerting Support
 
 ## Spring Boot Actuator
 
@@ -43,6 +54,10 @@ Note the addition of the following endpoints:
 
 Main code addition was the starter-actuator dependency.
 
+In PCF, note the GIT property at the top right to identify what's deployed.
+
+Also note the Health Check Information in the GUI.
+
 ## Scaling Up
 
 Demo adding additional instance using PCF (Scale Button)
@@ -53,7 +68,7 @@ What happens when a VM crashes or runs out memory ?
 
 Simulate a crash by hitting the /kill endpoint on PCF.
 
-Observe the logs .. note auto-recovery. 
+Observe the logs .. note auto-recovery.
 
 ## Spring Data with H2 -- Simple Data Rest Endpoint
 
@@ -67,6 +82,5 @@ Sensible defaults including in-memory H2 database.
 
 Automatic data population (import.sql).
 
-
-
+Note that database also works in PCF, we can also check the /actuator/health endpoint for details.
 
