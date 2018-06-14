@@ -6,8 +6,8 @@ Key features highlighted:
 2. AppsMan Developer Experience
 3. Scaling Up
 4. Spring Boot Actuator
-5. Spring Data with H2
-6. Spring Data on PCF with MySql
+5. Spring Data with H2 -- Simple Data Rest Endpoint
+6. Spring Data with MySQL -- Using PCF Marketplace and Service Binding
 
 ## Requirements
 
@@ -44,3 +44,19 @@ Note the addition of the following endpoints:
 5. /actuator/env/
 
 Main code addition was the starter-actuator dependency.
+
+## Spring Data with H2 -- Simple Data Rest Endpoint
+
+Note:
+
+http://localhost:8080/api/persons/
+
+Minimal code involved for to get a SQL Rest Endpoint up and running.
+
+Sensible defaults including in-memory H2 database.
+
+Automatic data population (import.sql).
+
+
+
+

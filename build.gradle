@@ -38,5 +38,10 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 
+	//Spring Data JPA + Data Rest + H2 In-memory Database
+	compile('org.springframework.boot:spring-boot-starter-data-rest')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('com.h2database:h2')
+
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
