@@ -4,8 +4,9 @@ Key features highlighted:
 
 1. Deployments using PCF Push
 2. AppsMan Developer Experience
-3. Scaling Up
-4. Spring Boot Actuator
+3. Spring Boot Actuator
+4. Scaling Up
+5. VM Recovery
 5. Spring Data with H2 -- Simple Data Rest Endpoint
 6. Spring Data with MySQL -- Using PCF Marketplace and Service Binding
 
@@ -29,9 +30,6 @@ Deploy to PCF
 cf push pcf-demo -p build/libs/pcf-demo-0.0.1-SNAPSHOT.jar
 ```
 
-## Scaling Up
-
-Demo adding additional instance using PCF (Scale Button)
 
 ## Spring Boot Actuator
 
@@ -44,6 +42,18 @@ Note the addition of the following endpoints:
 5. /actuator/env/
 
 Main code addition was the starter-actuator dependency.
+
+## Scaling Up
+
+Demo adding additional instance using PCF (Scale Button)
+
+## VM Recovery
+
+What happens when a VM crashes or runs out memory ?
+
+Simulate a crash by hitting the /kill endpoint on PCF.
+
+Observe the logs .. note auto-recovery. 
 
 ## Spring Data with H2 -- Simple Data Rest Endpoint
 
