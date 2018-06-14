@@ -80,7 +80,38 @@ Minimal code involved for to get a SQL Rest Endpoint up and running.
 
 Sensible defaults including in-memory H2 database.
 
-Automatic data population (import.sql).
+Automatic data population (import.sql) and schema creation.
+
+Boilerplate code reduction with Lombok and Data Annotation.
 
 Note that database also works in PCF, we can also check the /actuator/health endpoint for details.
 
+## Spring Data with MySQL -- Using PCF Marketplace and Service Binding
+
+Check the marketplace for available *on-demand , and self-serve* services.
+
+```sh
+cf marketplace
+```
+
+Note different plans.
+
+In PWS lets create a small MySQL instance:
+
+```sh
+cf create-service cleardb spark mydb
+```
+
+We also need to bind the service to our application:
+
+```sh
+cf bind-service pcf-demo mydb
+```
+
+and restart:
+
+```sh
+cf restage pcf-demo
+```
+
+Note updated /actuator/health endpoint.
