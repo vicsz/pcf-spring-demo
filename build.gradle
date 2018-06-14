@@ -10,10 +10,20 @@ buildscript {
 	}
 }
 
+//Plugin to automatically inject git.properties file into jar package
+plugins {
+	id "com.gorylenko.gradle-git-properties" version "1.4.21"
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+
+//Code to add buildinfo to Actuator info endpoint
+springBoot {
+	buildInfo()
+}
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
@@ -26,5 +36,7 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-actuator')
+
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
