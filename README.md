@@ -6,7 +6,7 @@ Key features highlighted:
 2. AppsMan Developer Experience
 3. Spring Boot Actuator
 4. Scaling Up
-5. VM Recovery
+5. High Availability
 5. Spring Data with H2 -- Simple Data Rest Endpoint
 6. Spring Data with MySQL -- Using PCF Marketplace and Service Binding
 
@@ -62,9 +62,9 @@ Also note the Health Check Information in the GUI.
 
 Demo adding additional instance using PCF (Scale Button)
 
-## VM Recovery
+## High Availability
 
-What happens when a VM crashes or runs out memory ?
+What happens when a JVM crashes or runs out memory ?
 
 Simulate a crash by hitting the /kill endpoint on PCF.
 
